@@ -139,6 +139,7 @@
   line-height: 26px;
   letter-spacing: 0%;
   text-align: left;
+  margin-left: 10px;
 }
 .time-2 {
   color: rgba(22, 22, 22, 0.8);
@@ -148,6 +149,7 @@
   line-height: 26px;
   letter-spacing: 0%;
   text-align: left;
+  margin-left: 10px;
 }
 .h {
   padding: 8px;
@@ -162,6 +164,7 @@
   text-align: left;
   width: 272px;
   margin-top: 15px;
+  margin-left: 10px;
 }
 .card-btn {
   color: rgb(22, 22, 22);
@@ -176,6 +179,7 @@
   background-color: white;
   border-radius: 5px;
   margin-top: 24px;
+  margin-left: 10px;
 }
 /* footer-container */
 .footer-container {
