@@ -1,0 +1,224 @@
+* {
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.plus-jakarta-sans-font {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.container {
+  max-width: 1414px;
+  margin: 0 auto;
+}
+/* banner */
+.banner {
+  display: flex;
+  border-radius: 30px;
+  background: rgb(22, 22, 22);
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+  flex: 1;
+}
+.banner-text {
+  padding-left: 125px;
+}
+.banner-title {
+  color: rgb(255, 255, 255);
+  font-family: Poppins;
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 80px;
+  letter-spacing: 0%;
+  text-align: left;
+  width: 568.38px;
+}
+.banner-dis {
+  color: rgb(255, 255, 255);
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0%;
+  text-align: left;
+  margin-top: 20px;
+  width: 541.62px;
+}
+.banner-btn {
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  font-family: HelveticaNeue;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0%;
+  text-align: center;
+  background: rgb(221, 0, 0);
+  margin-top: 30px;
+  border: none;
+  width: 187px;
+  height: 56px;
+}
+/* banner-img */
+.banner-img {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 621.9px;
+  height: 613px;
+  margin-left: 80px;
+}
+.blog-item {
+  margin-top: 100px;
+  display: flex;
+}
+.button-blog {
+  width: 312px;
+  border-radius: 10px;
+  background: rgb(22, 22, 22);
+  align-items: center;
+  display: block;
+  text-align: center;
+  justify-content: center;
+  /* width: 312px; */
+  height: 312px;
+}
+.blog-btn:first-child {
+  background-color: white;
+  color: rgb(22, 22, 22);
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.blog-btn:nth-child(3n + 2) {
+  background-color: white;
+  color: rgb(22, 22, 22);
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.card {
+  gap: 55px;
+  width: 312px;
+  /* height: 362px; */
+  /* border: 1px solid; */
+  box-sizing: border-box;
+  border: 1px solid rgb(232, 232, 232);
+  border-radius: 10px;
+}
+.cards {
+  margin-left: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 24px;
+  grid-column-gap: 50px;
+}
+.card-img {
+  width: 312px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.card-btn {
+  flex-direction: column;
+  display: block;
+}
+.time {
+  margin-left: 44px;
+  color: rgba(22, 22, 22, 0.7);
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.time-2 {
+  color: rgba(22, 22, 22, 0.8);
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.h {
+  padding: 8px;
+}
+.card-dis {
+  color: rgb(22, 22, 22);
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+  letter-spacing: 0%;
+  text-align: left;
+  width: 272px;
+  margin-top: 15px;
+}
+.card-btn {
+  color: rgb(22, 22, 22);
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+  width: 100px;
+  height: 32px;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 24px;
+}
+/* footer-container */
+.footer-container {
+  margin-top: 130px;
+  background: rgb(22, 22, 22);
+  max-width: 1726px;
+}
+.footer-title {
+  padding-top: 130px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer-title h1 {
+  color: rgb(255, 255, 255);
+  font-family: Poppins;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 60px;
+  letter-spacing: 0%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.footer-menu {
+  display: flex;
+  padding-bottom: 130px;
+  text-align: center;
+  justify-self: center;
+}
+.footer-menu ul {
+  display: flex;
+  list-style: none;
+  text-align: center;
+  margin-top: 50px;
+}
+.footer-menu ul li {
+  margin-left: 20px;
+
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+.footer-menu ul li a {
+  color: rgb(185, 185, 185);
+  text-decoration: none;
+}
