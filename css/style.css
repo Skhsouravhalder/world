@@ -13,6 +13,48 @@
   max-width: 1414px;
   margin: 0 auto;
 }
+/* The animation code */
+@keyframes example {
+  0% {
+    background-color: red;
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: blue;
+  }
+  100% {
+    background-color: green;
+  }
+}
+@keyframes img-ani {
+  0% {
+    opacity: 0;
+    transform: translateX(-20);
+    transform: scale(1);
+    background-color: aqua;
+  }
+  25% {
+    opacity: 0.2;
+    transform: translateX(-20);
+    transform: scale(1);
+    background-color: aquamarine;
+  }
+  50% {
+    opacity: 0.4;
+    transform: translateX(-20);
+    transform: scale(1);
+    background-color: blue;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-200);
+    transform: scale(1);
+    background-color: aqua;
+  }
+}
+
 /* banner */
 .banner {
   display: flex;
@@ -22,6 +64,7 @@
   justify-content: center;
   margin-top: 80px;
   flex: 1;
+  /* animation: example 3s ease normal infinite; */
 }
 .banner-text {
   padding-left: 125px;
@@ -68,6 +111,8 @@
   width: 621.9px;
   height: 613px;
   margin-left: 80px;
+  animation: img-ani 3s ease normal infinite;
+  transition: 0.3s;
 }
 /* card */
 .blog-item {
