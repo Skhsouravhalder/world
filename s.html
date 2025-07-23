@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Justapedia Copyvio Detector</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        max-width: 700px;
+        margin: auto;
+        padding: 20px;
+        background: #f8f9fa;
+      }
+      textarea,
+      input {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+      }
+      button {
+        padding: 10px 20px;
+        background: #007bff;
+        color: #fff;
+        border: none;
+      }
+      .results {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Justapedia Copyvio Detector</h2>
+    <label><strong>Mode:</strong></label>
+    <select id="mode">
+      <option value="search">Search Mode</option>
+      <option value="compare">Compare Mode</option>
+    </select>
+
+    <textarea
+      id="article"
+      rows="10"
+      placeholder="Paste article text here..."
+    ></textarea>
+    <input
+      id="url"
+      type="text"
+      placeholder="Optional: URL to compare (only for Compare Mode)"
+    />
+    <button onclick="checkCopyvio()">Run Check</button>
+
+    <div class="results" id="results"></div>
+
+    <script>
+      async function checkCopyvio() {
+        const mode = document.getElementById("mode").value;
+        const article = document.getElementById("article").value.trim();
+        const url = document.getElementById("url").value.trim();
+        const results = document.getElementById("results");
+
+        if (!article) return alert("Please paste article text.");
+
+        const formData = new FormData();
+        formData.append("mode", mode);
+        formData.append("article", article);
+        formData.append("url", url);
+
+        results.innerHTML = "Checking...";
+
+        const res = await fetch("copyvio-tool.php", {
+          method: "POST",
+          body: formData,
+        });
+
+        const json = await res.json();
+
+        if (json.mode === "compare") {
+          results.innerHTML = `<h3>Compare Result:</h3>
+        <p>Similarity Score: <strong>${json.similarity}%</strong></p>
+        <p>${json.note}</p>`;
+        } else {
+          results.innerHTML = `<h3>Google Snippet Search:</h3>`;
+          json.links.forEach((link, i) => {
+            results.innerHTML += `<p><a href="${link}" target="_blank">🔍 Snippet ${
+              i + 1
+            }</a></p>`;
+          });
+        }
+      }
+    </script>
+  </body>
+</html>
